@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #f2e7d2;
+  --color-surface: #eaddc2;
+  --color-accent: #d98fa0;
+  --color-gold: #cdae6b;
+  --color-leaf: #8faa87;
+  --color-ink: #4a3324;
+  --color-line: rgba(74, 51, 36, 0.16);
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Karla", ui-sans-serif, system-ui, sans-serif;
+  --font-console: "Press Start 2P", ui-monospace, monospace;
+
+  --shadow-soft: 0 6px 24px -8px rgba(0, 0, 0, 0.5);
+  --shadow-lift: 0 14px 36px -12px rgba(0, 0, 0, 0.55);
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-canvas);
+}
+
+/* Flat card surface — a hairline border, no blur, no glow. Used for cards
+   that need to be visually distinct from the canvas without pretending to
+   float over anything. */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+}
+
+/* Reserved for the one floating overlay on the site (the command palette) —
+   not applied to buttons, chips, or cards. */
+.glass {
+  background: rgba(255, 252, 245, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(74, 51, 36, 0.12);
+}
+
+/* Console easter egg — retargets the whole design-token palette at once,
+   so every bg-/text-/border- utility already in use re-skins for free. */
+.console-mode {
+  --color-canvas: #0d0f0c;
+  --color-surface: #12160e;
+  --color-accent: #39ff6a;
+  --color-gold: #39ff6a;
+  --color-ink: #d7ffde;
+  --color-line: #1f3324;
+}
+
+.console-mode ::selection {
+  background: #39ff6a;
+  color: #0d0f0c;
+}
+
+.pixelated {
+  image-rendering: pixelated;
+  shape-rendering: crispEdges;
+}
+
+/* Custom cursor — added by CustomCursor.tsx on non-touch devices only. */
+html.custom-cursor,
+html.custom-cursor * {
+  cursor: none;
+}
+html.custom-cursor input,
+html.custom-cursor textarea {
+  cursor: text;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-canvas);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 999px;
+}
