@@ -40,7 +40,7 @@ export function Contact() {
               {EMAIL}
             </button>
             <a
-              href="https://www.linkedin.com/in/gaurivijayendra"
+              href="https://www.linkedin.com/in/gauri-vijayendra"
               target="_blank"
               rel="noopener noreferrer"
               className="text-ink/70 underline decoration-line decoration-dotted underline-offset-4 hover:text-ink"
