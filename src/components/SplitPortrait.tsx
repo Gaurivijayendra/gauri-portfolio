@@ -152,7 +152,7 @@ export function SplitPortrait({ className, fullBleed = false, opened = false, on
               {fullBleed && <Underline className="mt-1.5 h-2 w-28 text-accent @lg:ml-auto @lg:w-40" />}
               {fullBleed && (
                 <p className="mt-3 hidden rounded-lg bg-ink/45 px-3 py-2.5 font-body text-xs leading-relaxed text-canvas backdrop-blur-sm @lg:block">
-                  I turn Figma prototypes into interfaces that actually move — the good
+                  I turn Figma prototypes into interfaces that actually move: the good
                   kind of animation, not the confetti kind. Half design instinct, half
                   stubborn debugging, until it finally feels right.
                 </p>

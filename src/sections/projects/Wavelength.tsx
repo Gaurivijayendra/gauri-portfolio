@@ -34,7 +34,7 @@ export function Wavelength() {
       <p className="mt-4 font-body text-xs uppercase tracking-wide text-ink/40">
         React · TypeScript · Tailwind · Framer Motion
       </p>
-      <ProjectLinks live={WAVELENGTH_URL} repo="#" />
+      <ProjectLinks live={WAVELENGTH_URL} />
     </Section>
   );
 }

@@ -37,7 +37,7 @@ export function JobFitIQ() {
       <p className="mt-4 font-body text-xs uppercase tracking-wide text-ink/40">
         FastAPI · TF-IDF · sentence-transformers
       </p>
-      <ProjectLinks live={JOBFITIQ_URL} repo="#" />
+      <ProjectLinks live={JOBFITIQ_URL} />
 
       <div className="card mt-6 flex flex-col items-center gap-4 rounded-2xl p-6 sm:flex-row sm:justify-center">
         <RadarChart className="h-40 w-40" />

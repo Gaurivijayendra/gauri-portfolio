@@ -1,7 +1,6 @@
 import { Section } from "../../components/Section";
 import { AvatarPose } from "../../components/avatar/AvatarPose";
 import { PitchContour } from "../../components/PitchContour";
-import { ProjectLinks } from "../../components/ProjectLinks";
 
 export function VocalCoach() {
   return (
@@ -9,6 +8,9 @@ export function VocalCoach() {
       <div className="flex items-center gap-3">
         <AvatarPose pose="headphones" className="h-14 w-auto shrink-0" />
         <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">AI Vocal Coach</h2>
+        <span className="rounded-full border border-line px-2.5 py-1 font-body text-[10px] uppercase tracking-wide text-ink/50">
+          Work in progress
+        </span>
       </div>
       <p className="mt-3 max-w-lg font-body text-ink/75">
         Singers can't always hear their own pitch drift in real time. I built a coach that
@@ -19,9 +21,8 @@ export function VocalCoach() {
       <p className="mt-4 font-body text-xs uppercase tracking-wide text-ink/40">
         React · FastAPI · librosa · pYIN · DTW · Claude API
       </p>
-      <ProjectLinks repo="#" />
 
-      <div className="card mt-10 rounded-2xl p-6">
+      <div className="card mt-6 rounded-2xl p-6">
         <p className="mb-3 font-body text-xs text-ink/50">sung take vs. reference, DTW-aligned</p>
         <PitchContour className="h-24 w-full" />
         <div className="mt-2 flex gap-5 font-body text-xs text-ink/50">
