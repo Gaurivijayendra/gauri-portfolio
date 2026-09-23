@@ -6,7 +6,7 @@ export interface PaletteCommand {
   keywords?: string;
 }
 
-export const EMAIL = "gaurivijayendra@gmail.com";
+export const EMAIL = "gaurivij24@gmail.com";
 export const WAVELENGTH_URL = "https://wavelength-music-dashboard.vercel.app";
 export const JOBFITIQ_URL = "https://jobfitiq-resume-jd-matcher.vercel.app";
 
